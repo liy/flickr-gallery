@@ -4,9 +4,9 @@ import {addLike, removeLike} from '../actions';
 import './ImageItem.scss';
 import LikeButton from './LikeButton'
 
-let ImageItem = ({store, isLiked, link, description, thumbnail}) => {
+let ImageItem = ({tabIndex, store, isLiked, link, description, thumbnail}) => {
   return <div className='image-item'>
-      <img alt={description} className='thumbnail-image' src={thumbnail}/>
+      <img tabIndex={tabIndex} alt={description} className='thumbnail-image' src={thumbnail}/>
       {/* add and remove from favourites */}
       <LikeButton isLiked={isLiked} onClick={(e) => {
         if(isLiked) {
@@ -24,6 +24,7 @@ const mapStateToProps = (state, props) => {
   return {
     // For simplicity reason, store is passed in explicitly
     store: props.store,
+    tabIndex: props.tabIndex,
     isLiked: state.favourites.includes(props.link),
     link: props.link,
     description: props.description,

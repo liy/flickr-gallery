@@ -7,7 +7,7 @@ const LikeButton = ({isLiked, onClick}) => {
   
   return (
     <div className='like-button' onClick={onClick}>
-      <img src={url}/>
+      <img alt={isLiked ? 'remove from favourite' : 'add to favroute'} src={url}/>
     </div>
   );
 }

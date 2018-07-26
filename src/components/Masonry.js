@@ -6,7 +6,7 @@ let Masonry = ({store, images}) => {
   let imageItems = [];
   for(let i=0; i<images.length; ++i) {
     let image = images[i];
-    imageItems[i] = <ImageItem store={store} thumbnail={image.thumbnail} link={image.link} title={image.title} description={image.description} key={i}/>;
+    imageItems[i] = <ImageItem tabIndex={i+2} store={store} thumbnail={image.thumbnail} link={image.link} title={image.title} description={image.description} key={i}/>;
   }
   
   return <div className='masonry'>{imageItems}</div>

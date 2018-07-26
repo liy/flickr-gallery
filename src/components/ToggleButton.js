@@ -7,12 +7,18 @@ let ToggleButton = ({store, favouritesOnly, children}) => {
   // for simplicity reason, 2 svg are used
   let url = favouritesOnly ? require('../assets/toggle-on.svg') : require('../assets/toggle-off.svg');
 
+  let toggle = () => {
+    store.dispatch(toggleFavouritesOnly());
+  }
+
   return (
-    <div className='toggle-button' onClick={() => {
-      // update store state
-      store.dispatch(toggleFavouritesOnly());
+    // becaus i'm using div instead input, needs manually handle enter key make selection action 
+    <div tabIndex="1" className='toggle-button' onClick={toggle} onKeyDown={e => {
+      if(e.keyCode == 13) {
+        toggle();
+      }
     }}>
-      <img src={url}/>
+      <img alt={favouritesOnly ? 'turn favourites only off' : 'turn favourites only on'} src={url}/>
       <span>{children}</span>
     </div>
   );
