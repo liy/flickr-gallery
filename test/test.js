@@ -31,6 +31,7 @@ describe('Component test', () => {
     const btn = shallow(<ToggleButton onClick={onClick} store={storeMock}/>);
     btn.simulate('click');
 
+    expect(btn).toMatchSnapshot();
     expect(onClick.mock.calls.length).toBe(1);
   })
 });
