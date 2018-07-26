@@ -63,7 +63,7 @@ export default class App extends Component
 
   jsonp() {
     this.jsonp = document.createElement('script');
-    this.jsonp.setAttribute('src', `http://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=jsonpCallback&tags=dogs%20in%20hats`);
+    this.jsonp.setAttribute('src', `https://api.flickr.com/services/feeds/photos_public.gne?format=json&jsoncallback=jsonpCallback&tags=dogs%20in%20hats`);
     // just in case there is an error loading the script
     this.jsonp.onerror = (e) => {
       if(document.head.contains(this.jsonp)) {
