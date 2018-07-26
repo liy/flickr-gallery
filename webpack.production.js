@@ -36,7 +36,7 @@ module.exports = {
       // copy the required assets to dist folder
       // use require() to get the actuall url
       {
-        test: /\.(|png|jpg|mp3|ogg|atlas|txt|mp4|gif)$/,
+        test: /\.(|png|jpg|mp3|ogg|atlas|txt|mp4|gif|svg)$/,
         use: [
           {
             loader: 'file-loader',
