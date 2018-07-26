@@ -1,0 +1,23 @@
+.toggle-button {
+  font-size: 0.8em;
+  
+  margin: auto;
+
+  width: 150px;
+  height: 32px;
+
+  // center img
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  img {
+    height: 24px;
+  }
+
+  span {
+    margin-left: 5px;
+  }
+}

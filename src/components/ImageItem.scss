@@ -1,0 +1,39 @@
+.image-item {
+  position: relative;
+
+  p {
+    padding: 5px 10px;
+  }
+}
+
+
+.thumbnail-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.description {
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  // hack!
+  margin-bottom: 4px;
+
+  opacity: 0;
+  transition: opacity 0.2s ease;
+
+  border-radius: 0 0 5px 5px;
+}
+
+.image-item:hover {
+  .description {
+    opacity: 0.8;
+  }
+
+  .like-button {
+    opacity: 0.8;
+  }
+}
