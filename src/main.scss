@@ -4,3 +4,8 @@ body {
 
   margin: 4px;
 }
+
+// remove outline of the element if it has tabIndex attribute
+*[tabIndex] {
+  outline: none;
+}
